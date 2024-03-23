@@ -93,7 +93,7 @@ ul {
     align-items: center;
     justify-content: center;
     outline: none;
-    background-color: var(--primary-color);
+    background-color: cyan;
     border: none;
     color: var(--white-color);
     font-size: var(--small-font-size);
@@ -254,14 +254,14 @@ ul {
     font-family: var(--font-title);
     font-size: 100px;
     text-transform: uppercase;
-    color: var(--primary-color);
+    color: cyan;
 }
 .hero__slide-text span {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -35%);
-    color: #f3dc55;
+    color: black;
 }
 .hero__slide-text p {
     font-family: var(--font-cursive);
