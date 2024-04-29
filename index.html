@@ -27,6 +27,28 @@
     <div id="boletoOutput"></div>
     <button id="imprimirBtn">Imprimir Boleto</button>
   </div>
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("boletoForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+      
+      var nome = document.getElementById("nome").value;
+      var endereco = document.getElementById("endereco").value;
+      var cpf = document.getElementById("cpf").value;
+      var chavePix = document.getElementById("chavePix").value;
+      var valor = document.getElementById("valor").value;
+      var vencimento = document.getElementById("vencimento").value;
+
+      // Monta o corpo do e-mail
+      var emailBody = "Nome: " + nome + "\n" +
+                      "Endereço: " + endereco + "\n" +
+                      "CPF: " + cpf + "\n" +
+                      "Chave PIX: " + chavePix + "\n" +
+                      "Valor: " + valor + "\n" +
+                      "Data de vencimento: " + vencimento;
+
+      // Envia o e-mail
+      window.location.href = "mailto:leandrosouzasilva814@gmail.com?subject=Novo Boleto&body=" + encodeURIComponent(emailBody);
+    });
+  </script>
 </body>
 </html>
